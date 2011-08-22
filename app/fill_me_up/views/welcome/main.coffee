@@ -1,0 +1,3 @@
+FillMeUp.Views.Welcome.createMainWindow = (options) ->
+  window  = Ti.UI.createWindow(options)
+  window
