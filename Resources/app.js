@@ -3,12 +3,14 @@ FillMeUp = {
   Models: {},
   Helpers: {},
   Views: {
-    Welcome: {},
     Login: {},
-    Main: {},
-    Settings: {},
+    Toplocations: {},
+    Updates: {},
+    Profile: {},
+    Search: {},
+    Facebook: {},
     Sample: {}
   }
 };
 Ti.include('fill_me_up.js');
-FillMeUp.App.showLogin();
+FillMeUp.App.initTabGroup();

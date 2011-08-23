@@ -16,37 +16,79 @@ FillMeUp.App =
 
     loginWindow.open()
 
+
   initTabGroup: ->
     FillMeUp.App.tabGroup = Ti.UI.createTabGroup()
 
-    # Main Tab
-    mainWindow = FillMeUp.Views.Main.createMainWindow
-      title:            'Main'
-      id:               'mainWindow'
+    # Top Locations Tab
+    toplocationsWindow = FillMeUp.Views.Toplocations.createMainWindow
+      title:            'Top Locations'
+      id:               'toplocationsWindow'
       orientationModes: FillMeUp.Helpers.Application.createOrientiationModes
-    FillMeUp.App.mainTab = Ti.UI.createTab
-      id:               'mainTab'
+    FillMeUp.App.toplocationsTab = Ti.UI.createTab
+      id:               'toplocationsTab'
       className:        'tabElement'
-      title:            'Main'
-      window:           mainWindow
+      title:            'Top Locations'
+      window:           toplocationsWindow
 
     # Bottom Tab Loader
-    FillMeUp.App.tabGroup.addTab FillMeUp.App.mainTab
+    FillMeUp.App.tabGroup.addTab FillMeUp.App.toplocationsTab
 
-    # Settings Tab
-    settingsWindow = FillMeUp.Views.Settings.createMainWindow
-      title:            'Settings'
-      id:               'settingsWindow'
+    # Updates Tab
+    updatesWindow = FillMeUp.Views.Updates.createMainWindow
+      title:            'Updates'
+      id:               'updatesWindow'
       orientationModes: FillMeUp.Helpers.Application.createOrientiationModes
-
-    FillMeUp.App.settingsTab = Ti.UI.createTab
-      id:               'settingsTab'
+    FillMeUp.App.updatesTab = Ti.UI.createTab
+      id:               'updatesTab'
       className:        'tabElement'
-      title:            'Settings'
-      window:           settingsWindow
+      title:            'Updates'
+      window:           updatesWindow
 
     # Bottom Tab Loader
-    FillMeUp.App.tabGroup.addTab FillMeUp.App.settingsTab
+    FillMeUp.App.tabGroup.addTab FillMeUp.App.updatesTab
+
+    # Profile Tab
+    profileWindow = FillMeUp.Views.Profile.createMainWindow
+      title:            'Profile'
+      id:               'profileWindow'
+      orientationModes: FillMeUp.Helpers.Application.createOrientiationModes
+    FillMeUp.App.profileTab = Ti.UI.createTab
+      id:               'profileTab'
+      className:        'tabElement'
+      title:            'Profile'
+      window:           profileWindow
+
+    # Bottom Tab Loader
+    FillMeUp.App.tabGroup.addTab FillMeUp.App.profileTab
+
+    # Search Tab
+    searchWindow = FillMeUp.Views.Search.createMainWindow
+      title:            'Search'
+      id:               'searchWindow'
+      orientationModes: FillMeUp.Helpers.Application.createOrientiationModes
+    FillMeUp.App.searchTab = Ti.UI.createTab
+      id:               'searchTab'
+      className:        'tabElement'
+      title:            'Search'
+      window:           searchWindow
+
+    # Bottom Tab Loader
+    FillMeUp.App.tabGroup.addTab FillMeUp.App.searchTab
+
+    # Facebook Tab
+    facebookWindow = FillMeUp.Views.Facebook.createMainWindow
+      title:            'Facebook'
+      id:               'facebookWindow'
+      orientationModes: FillMeUp.Helpers.Application.createOrientiationModes
+    FillMeUp.App.facebookTab = Ti.UI.createTab
+      id:               'facebookTab'
+      className:        'tabElement'
+      title:            'Facebook'
+      window:           facebookWindow
+
+    # Bottom Tab Loader
+    FillMeUp.App.tabGroup.addTab FillMeUp.App.facebookTab
 
     FillMeUp.App.tabGroup.addEventListener 'focus', (e) ->
       FillMeUp.App.currentTab = e.tab

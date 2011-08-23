@@ -1,15 +1,3 @@
-#sampleLabel {
-  height: 10;
-  font-family: "Monospace";
-  font-size: 12;
-  color: "#000"; }
-
-#sampleLabel {
-  height: 10;
-  font-family: "Monospace";
-  font-size: 12;
-  color: "#000"; }
-
 #loginTextField {
   color: "blue";
   height: 35;
@@ -22,6 +10,9 @@
   height: 35;
   font-size: 26; }
 
+#filterlocationsTextField {
+  height: 50; }
+
 #sampleLabel {
   height: 10;
   font-family: "Monospace";
@@ -33,3 +24,18 @@
   font-family: "Monospace";
   font-size: 12;
   color: "#000"; }
+
+#sampleLabel {
+  height: 10;
+  font-family: "Monospace";
+  font-size: 12;
+  color: "#000"; }
+
+#sampleLabel {
+  height: 10;
+  font-family: "Monospace";
+  font-size: 12;
+  color: "#000"; }
+
+#regularTextField {
+  height: 35; }

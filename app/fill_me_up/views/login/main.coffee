@@ -24,14 +24,14 @@ FillMeUp.Views.Login.createMainWindow = (options) ->
     passwordMask:       'true'
     borderStyle:        Titanium.UI.INPUT_BORDERSTYLE_ROUNDED
 
-  loginButton = Ti.UI.createButton
-    id:                 'loginButton'
-    backgroundImage:    'images/button_login.png'
-    height:             88
-    width:              85
-    top:                132
-    left:               window.width-98
-    borderStyle:        Titanium.UI.INPUT_BORDERSTYLE_ROUNDED
+  #loginButton = Ti.UI.createButton
+  #  id:                 'loginButton'
+  #  backgroundImage:    'images/button_login.png'
+  #  height:             88
+  #  width:              85
+  #  top:                132
+  #  left:               window.width-98
+  #  borderStyle:        Titanium.UI.INPUT_BORDERSTYLE_ROUNDED
 
   loginButtonLabel = Ti.UI.createLabel
     id:                 'loginButtonLabel'
@@ -49,7 +49,7 @@ FillMeUp.Views.Login.createMainWindow = (options) ->
   window.add(loginView)
   window.add(nameTextField)
   window.add(passwordTextField)
-  window.add(loginButton)
+  #window.add(loginButton)
   window.add(loginButtonLabel)
 
   window

@@ -7,11 +7,15 @@ FillMeUp =
   Models:   {}
   Helpers:  {}
   Views:
-    Welcome: {}
     Login: {}
-    Main: {}
-    Settings: {}
+    Toplocations: {}
+    Updates: {}
+    Profile: {}
+    Search: {}
+    Facebook: {}
+# depreciated views
     Sample: {}
+
 # Include your libraries like:
 # Ti.include('vendor/date.js')
 # Ti.include('vendor/underscore.js')
@@ -24,5 +28,5 @@ Ti.include('fill_me_up.js')
 # and use $.API for the class name. Uncomment to use.
 # $ = FillMeUp
 
-#FillMeUp.App.initTabGroup()
-FillMeUp.App.showLogin()
+#FillMeUp.App.showLogin()
+FillMeUp.App.initTabGroup()
