@@ -1,7 +1,9 @@
+require 'rake'
 require 'rubygems'
 require 'nokogiri'
 require 'colored'
 require 'betabuilder'
+require 'active_record'
 
 require File.expand_path(File.join(Dir.pwd, 'config/config.rb'))
 include Config
@@ -16,6 +18,21 @@ BetaBuilder::Tasks.new do |config|
 end
 
 task :default => ["build:iphone"]
+
+namespace :db do
+  desc "Drop and create the current database"
+  task :create do
+    ActiveRecord::Base.establish_connection(
+      :adapter => "sqlite3",
+      :dbfile  => ":memory:"
+    )
+    puts "Connection established"
+    ActiveRecord::Base.connection.create_database(
+      :database => 'db/development.sqlite3'
+    )
+    puts "Database created"
+  end
+end
 
 namespace :setup do
   desc "Do all the setup procedures"

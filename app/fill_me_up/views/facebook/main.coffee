@@ -1,6 +1,9 @@
 FillMeUp.Views.Facebook.createMainWindow = (options) ->
   window = Ti.UI.createWindow(options)
 
+  # place your Facebook AppID here, you should get when you create your Facebook app
+  # when you let facebook to mobile interaction via SSO (single sign on), use your appname
+  # e.g. com.yourdomain.appname
   Titanium.Facebook.appid = "107384569364316"
 
   Titanium.Facebook.permissions = ['publish_stream', 'read_stream']

@@ -18,6 +18,7 @@ FillMeUp.App =
 
 
   initTabGroup: ->
+    Ti.API.debug 'Tab Group initialized'
     FillMeUp.App.tabGroup = Ti.UI.createTabGroup()
 
     # Top Locations Tab
